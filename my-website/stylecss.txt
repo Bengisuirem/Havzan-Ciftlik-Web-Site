@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=MonteCarlo&family=Poppins:ital,wght@0,300;0,400;0,500;1,600&display=swap");
+
+:root {
+  --main-color: #0d4145;
+  --black-color: #301515;
+  --border: 0.1rem solid rgba(255, 255, 255, 0.4);
+}
+
+* {
+  font-family: "Caveat", cursive;
+  font-family: "MonteCarlo", cursive;
+  font-family: "Poppins", sans-serif;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s ease;
+}
+
+/*! base html codes */
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 0.8rem;
+  background-color: #ffffff;
+}
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 3rem;
+  background-color: #4b0909;
+}
+
+body {
+  background-color: var(--main-color);
+}
+
+section {
+  padding: 3.5rem 7%;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 2rem 3.75rem;
+  border-radius: 30rem;
+  font-size: 1.7rem;
+  color: #ffffff;
+  background-color: #4b0909;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.heading {
+  color: #ddaa44;
+  text-transform: uppercase;
+  font-size: 4rem;
+  margin-bottom: 3.5rem;
+  border-bottom: 0.1rem solid #ddaa44;
+}
+
+/* header start */
+
+.header .search-form{
+  position: absolute;
+  top: 115%;
+  right: 7%;
+  background-color: #fff;
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  border-radius: 3rem;
+  box-shadow: 0px 0px 17px -2px rgba(228, 13, 13, 0.75);
+  transform: scaleY(0);
+}
+.header .search-form.active{
+  transform: scaleY(1);
+}
+
+.header .search-form i{
+  cursor: pointer;
+  font-size: 2.2rem;
+  margin-right: 1.5rem;
+  color: var(--black-color);
+}
+.header .search-form input{
+  margin-left: 1rem;
+  width: 100%;
+}
+
+
+.header .logo img {
+  height: 10rem;
+}
+.header {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7%;
+  margin: 2rem 7%;
+  border-radius: 30rem;
+  box-shadow: 0px 0px 17px -2px rgba(228, 13, 13, 0.75);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+.header .navbar a {
+  margin: 0 1rem;
+  font-size: 1.6rem;
+  color: var(--black-color);
+  border-bottom: 0.2rem solid transparent;
+}
+
+.header .navbar a:hover {
+  border-color: #fdce4e;
+  padding-bottom: 0.5rem;
+}
+
+.header .buttons button {
+  cursor: pointer;
+  font-size: 2.5rem;
+  margin-left: 2rem;
+  background-color: transparent;
+}
+
+#menu-btn {
+  display: none;
+}
+
+/* header end */
+
+/* home start */
+.home {
+  min-height: 100vh;
+  background: url(../images/home2.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: -14.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.home .content {
+  max-width: 70rem;
+}
+
+.home .content h3 {
+  font-family: "MonteCarlo", cursive;
+  font-size: 6rem;
+  color: #022f3a;
+  background-color: hwb(44 61% 2% / 0.482);
+  border-radius: 3rem;
+  box-shadow: 0px 0px 17px -2px rgba(228, 13, 13, 0.75);
+}
+
+.home .content p {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.8;
+  padding: 1rem 0;
+  color: #ffffff;
+}
+
+/* home end */
+
+/* menu start */
+.menu .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.menu .box-container .box {
+  padding: 3rem;
+  background-color: rgba(255, 255, 255, 0.303);
+  border-radius: 3rem;
+  min-height: 45rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.menu .box-container .box img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10%;
+}
+
+.menu .box-container .box:hover .box-head img {
+  transform: scale(1.2);
+}
+
+.menu .box-container .box h3 {
+  font-size: 2.5rem;
+  padding: 2rem 0;
+}
+
+.menu .box-container .box .price {
+  font-size: 2.1rem;
+  padding: 0.5rem 0;
+}
+
+/* menu end */
+
+/* about start */
+.about .row {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+}
+
+.about .row .image {
+  flex: 0.4 0.5 45rem;
+}
+.about .row .img {
+  width: 100%;
+}
+.about .row .content {
+  flex: 1 1 45rem;
+}
+.about .row .content h3 {
+  font-size: 3rem;
+  color: #ffffff;
+}
+
+.about .row .content p {
+  font-size: 1.8rem;
+  color: #ccc;
+  padding: 1rem 0;
+  line-height: 1.8;
+}
+
+/* about end */
+/* contact start */
+.contact .row {
+  display: flex;
+  background-color: #4b0909;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+.contact .row form h3 {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  color: #fff;
+}
+.contact .row form .inputBox {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+  border: var(--border);
+}
+.contact .row form .inputBox i {
+  color: #fff;
+  font-size: 2rem;
+  padding-left: 2rem;
+}
+.contact .row form .inputBox input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  color: #fff;
+  text-transform: none;
+  background: none;
+}
+.contact .row form .btn {
+  color: #4b0909;
+  background-color: #ddaa44;
+  font-weight: bold;
+}
+/* contact end */
+/* footer start */
+.footer {
+  background-color: #00151a;
+  text-align: center;
+}
+
+.footer .share {
+  padding: 3rem 0;
+}
+.footer .share a {
+  width: 4rem;
+  height: 4rem;
+  line-height: 4rem;
+  color: #fff;
+  font-size: 2rem;
+  border: var(--border);
+  border-radius: 50%;
+  margin: 0.3rem;
+}
+.footer .share a:hover {
+  background-color: #4b0909;
+}
+
+.footer .credit {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 300;
+  padding-top: 1.5rem;
+}
+/* footer end */
+/* responsive start */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .header {
+    padding: 1.5rem 2rem;
+  }
+  .header .logo img {
+    height: 7rem;
+  }
+
+  section {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+  }
+  .header .navbar{
+    position: absolute;
+    top: 95%;
+    background-color: #fff;
+    height: calc(100vh - 9rem);
+    width: 30rem;
+    box-shadow: 0px 20px 14px 0px rgb(red, green, blue);
+    right: -100%;
+  }
+  .header .navbar.active{
+    right: 3rem;
+  }
+
+  .header .navbar a{
+    color:var(--black-color);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+}
+
+/* responsive end */
